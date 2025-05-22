@@ -1,5 +1,6 @@
 import type { Skill } from '../types';
-import { Code, Database, PenTool, Server, LayoutGrid, FileJson, Grid, Globe, Brush, Figma, Github, Terminal, Cpu, Package, Triangle as VectorTriangle, Zap, MessageSquare, Cloud, Layers, Box, MessageCircle, TestTube } from 'lucide-react';
+import { Code, Database, Server, LayoutGrid, FileJson, Globe,  Figma, Github, Terminal, Package, Zap, MessageSquare, Cloud, Layers, Box, MessageCircle, TestTube } from 'lucide-react';
+// import {PenTool,Grid,Brush, Cpu, Triangle as VectorTriangle} from 'lucide-react';
 
 const skills: Skill[] = [
   {

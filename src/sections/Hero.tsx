@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, Download, Hand, Instagram } from 'lucide-react';
+import { Github, Linkedin, Download, Instagram } from 'lucide-react';
 // import Terminal from '../components/ui/Terminal';
 import Button from '../components/ui/Button';
 import AnimatedText from '../components/ui/AnimatedText';

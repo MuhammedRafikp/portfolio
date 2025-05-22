@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
 import SectionTitle from '../components/ui/SectionTitle';
 import skillsData from '../data/skills';
 
 const Skills: React.FC = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimationControls();
 
   useEffect(() => {
@@ -22,12 +22,12 @@ const Skills: React.FC = () => {
   }, [controls]);
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    // setIsHovered(true);
     controls.stop();
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    // setIsHovered(false);
     controls.start({
       x: [0, -1000],
       transition: {

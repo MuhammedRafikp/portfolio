@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/ui/SectionTitle';
-import { Code, User, Coffee, Heart } from 'lucide-react';
-import Button from '../components/ui/Button';
+// import { Code, User, Coffee, Heart } from 'lucide-react';
+// import Button from '../components/ui/Button';
 
 const About: React.FC = () => {
     return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useTheme } from '../../context/ThemeContext';
-import { Moon, Sun } from 'lucide-react';
+// import { useTheme } from '../../context/ThemeContext';
+// import { Moon, Sun } from 'lucide-react';
 import type { NavLink } from '../../types';
 import useScrollSpy from '../../hooks/useScrollSpy';
 

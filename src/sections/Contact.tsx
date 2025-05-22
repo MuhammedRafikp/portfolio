@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/ui/SectionTitle';
 import ContactForm from '../components/ui/ContactForm';
-import { Mail, MapPin, Phone, Clock } from 'lucide-react';
+// import { Mail, MapPin, Phone, Clock } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (

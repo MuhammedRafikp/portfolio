@@ -16,7 +16,7 @@ const scrollToSection = (href: string) => {
 
 const Hero: React.FC = () => {
     return (
-        <section id="home" className="min-h-[60vh] flex items-center justify-center pt-8 md:pt-20 pb-4 md:pb-16 relative overflow-hidden">
+        <section id="home" className="min-h-[60vh] lg:min-h-screen flex items-center justify-center pt-8 md:pt-20 pb-4 md:pb-16 relative overflow-hidden">
             {/* Programming-themed background */}
             <div className="absolute inset-0 bg-[#1e293b]">
                 <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>

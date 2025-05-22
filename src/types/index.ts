@@ -24,6 +24,7 @@ export interface NavLink {
     id: number;
     role: string;
     company: string;
+    companyLink: string;
     duration: string;
     description: string[];
   }

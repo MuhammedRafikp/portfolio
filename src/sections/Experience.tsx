@@ -67,7 +67,9 @@ const Experience: React.FC = () => {
                     </h4>
                     
                     <p className="text-sm sm:text-base text-gray-300 mb-2 sm:mb-3">
-                      {job.company}
+                      <a href={job.companyLink} target="_blank" rel="noopener noreferrer">
+                        {job.company}
+                      </a>
                     </p>
                     
                     <ul className="text-sm sm:text-base text-gray-300 space-y-1.5 sm:space-y-2">

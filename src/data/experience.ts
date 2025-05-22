@@ -5,6 +5,7 @@ export const workExperience: Experience[] = [
     id: 1,
     role: 'Web Developer',
     company: 'E-comex',
+    companyLink: 'https://ecomex.tech/',
     duration: 'Sep 2024 - Present',
     description: [
       'Developed and maintained responsive websites for small businesses',

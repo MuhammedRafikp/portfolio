@@ -1,44 +1,55 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimationControls } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
+import { motion, useAnimationControls, useMotionValue } from 'framer-motion';
 import SectionTitle from '../components/ui/SectionTitle';
 import skillsData from '../data/skills';
 
 const Skills: React.FC = () => {
-  // const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimationControls();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const x = useMotionValue(0);
 
   useEffect(() => {
-    controls.start({
-      x: [0, -1000],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 20,
-          ease: "linear",
+    if (containerRef.current) {
+      // const containerWidth = containerRef.current.offsetWidth;
+      const skillWidth = 100; // Approximate width of each skill item
+      const totalSkillsWidth = skillsData.length * skillWidth;
+      
+      controls.start({
+        x: [0, -totalSkillsWidth],
+        transition: {
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 20,
+            ease: "linear",
+          },
         },
-      },
-    });
+      });
+    }
   }, [controls]);
 
   const handleMouseEnter = () => {
-    // setIsHovered(true);
     controls.stop();
   };
 
   const handleMouseLeave = () => {
-    // setIsHovered(false);
-    controls.start({
-      x: [0, -1000],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 12,
-          ease: "linear",
+    if (containerRef.current) {
+      // const containerWidth = containerRef.current.offsetWidth;
+      const skillWidth = 100; // Approximate width of each skill item
+      const totalSkillsWidth = skillsData.length * skillWidth;
+      
+      controls.start({
+        x: [x.get(), x.get() - totalSkillsWidth],
+        transition: {
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 15,
+            ease: "linear",
+          },
         },
-      },
-    });
+      });
+    }
   };
 
   return (
@@ -66,6 +77,7 @@ const Skills: React.FC = () => {
         />
         
         <div 
+          ref={containerRef}
           className="relative w-full overflow-hidden py-6 sm:py-8"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -73,6 +85,7 @@ const Skills: React.FC = () => {
           <motion.div
             className="flex gap-4 sm:gap-8"
             animate={controls}
+            style={{ x }}
           >
             {/* First set of skills */}
             {skillsData.map((skill, index) => (
@@ -94,8 +107,7 @@ const Skills: React.FC = () => {
                   transition-colors duration-300">{skill.name}</span>
               </motion.div>
             ))}
-            
-            {/* Duplicate set for seamless loop */}
+            {/* Duplicate set of skills for seamless loop */}
             {skillsData.map((skill, index) => (
               <motion.div
                 key={`skill-2-${index}`}

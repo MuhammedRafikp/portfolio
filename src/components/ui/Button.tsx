@@ -11,6 +11,8 @@ interface ButtonProps {
   icon?: React.ReactNode;
   disabled?: boolean;
   fullWidth?: boolean;
+  target?: string;
+  rel?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,6 +26,8 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   disabled = false,
   fullWidth = false,
+  target,
+  rel,
 }) => {
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2';
   
@@ -46,7 +50,7 @@ const Button: React.FC<ButtonProps> = ({
   
   if (href && !disabled) {
     return (
-      <a href={href} className={buttonStyles}>
+      <a href={href} className={buttonStyles} target={target} rel={rel}>
         {icon && <span className="mr-2">{icon}</span>}
         {children}
       </a>

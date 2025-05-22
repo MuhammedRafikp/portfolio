@@ -6,7 +6,7 @@ import SectionTitle from '../components/ui/SectionTitle';
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="py-12 sm:py-16 md:py-20 bg-[#0a1224] relative overflow-hidden">
+        <section id="about" className="py-8 sm:py-16 md:py-20 bg-[#0a1224] relative overflow-hidden">
             {/* Programming-themed background */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
@@ -41,14 +41,14 @@ const About: React.FC = () => {
                     </h3> */}
 
                     <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 px-2 sm:px-0">
-                        I’m a passionate Full Stack Developer specializing in scalable and efficient web applications using the MERN stack (MongoDB, Express.js, React, Node.js). I have hands-on experience building two full-featured web apps that showcase my skills in creating robust and user-friendly solutions.                          </p>
+                        I'm a passionate Full Stack Developer specializing in scalable and efficient web applications using the MERN stack (MongoDB, Express.js, React, Node.js). I have hands-on experience building two full-featured web apps that showcase my skills in creating robust and user-friendly solutions.                          </p>
 
                     <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 px-2 sm:px-0">
-                        I’ve also gained practical knowledge in microservice architecture, allowing me to design modular and maintainable backend systems that scale with business needs.
+                        I've also gained practical knowledge in microservice architecture, allowing me to design modular and maintainable backend systems that scale with business needs.
                     </p>
 
                     <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 px-2 sm:px-0">
-                        Problem solving drives me — I enjoy tackling challenges, debugging, and optimizing code to deliver great digital experiences. I’m always eager to learn new technologies and stay updated in web development.
+                        Problem solving drives me — I enjoy tackling challenges, debugging, and optimizing code to deliver great digital experiences. I'm always eager to learn new technologies and stay updated in web development.
                     </p>
 
                     {/* <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-md mx-auto">

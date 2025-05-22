@@ -5,6 +5,7 @@ import { Github, Linkedin, Download, Instagram } from 'lucide-react';
 import Button from '../components/ui/Button';
 import AnimatedText from '../components/ui/AnimatedText';
 import dp from '../assets/dp.jpg';
+import cv from '../assets/Muhammed_Rafi_CV.pdf';
 
 const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -15,7 +16,7 @@ const scrollToSection = (href: string) => {
 
 const Hero: React.FC = () => {
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center pt-16 md:pt-20 pb-12 md:pb-16 relative overflow-hidden">
+        <section id="home" className="min-h-screen flex items-center justify-center pt-12 md:pt-20 pb-8 md:pb-16 relative overflow-hidden">
             {/* Programming-themed background */}
             <div className="absolute inset-0 bg-[#1e293b]">
                 <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
@@ -102,10 +103,12 @@ const Hero: React.FC = () => {
                                 Get in Touch
                             </Button>
                             <Button
-                                href="/resume.pdf"
+                                href={cv}
                                 variant="outline"
                                 icon={<Download className="w-3 h-3 sm:w-4 sm:h-4" />}
                                 className="text-sm sm:text-base"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Download CV
                             </Button>

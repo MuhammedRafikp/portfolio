@@ -16,7 +16,7 @@ const scrollToSection = (href: string) => {
 
 const Hero: React.FC = () => {
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center pt-12 md:pt-20 pb-8 md:pb-16 relative overflow-hidden">
+        <section id="home" className="min-h-[50vh] flex items-center justify-center pt-8 md:pt-20 pb-4 md:pb-16 relative overflow-hidden">
             {/* Programming-themed background */}
             <div className="absolute inset-0 bg-[#1e293b]">
                 <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
                     >
-                        <div className="mb-4 md:mb-6">
+                        <div className="mb-3 md:mb-6">
                             <AnimatedText
                                 text="Hey, I'm Muhammed Rafi"
                                 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2"
@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
                         </div>
 
                         <motion.p
-                            className="text-gray-300 text-base sm:text-lg mb-6 md:mb-8 mx-auto max-w-lg px-2 sm:px-0"
+                            className="text-gray-300 text-base sm:text-lg mb-4 md:mb-8 mx-auto max-w-lg px-2 sm:px-0"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.9, duration: 0.7 }}
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
                             </motion.p>
 
                         <motion.div
-                            className="flex flex-wrap gap-2 sm:gap-3 mb-6 md:mb-8 justify-center"
+                            className="flex flex-wrap gap-2 sm:gap-3 mb-4 md:mb-8 justify-center"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1.1, duration: 0.7 }}
